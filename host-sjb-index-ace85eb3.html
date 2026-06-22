@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯 · 简明指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f9fafc;
+            color: #1e2b37;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .page {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* header / hero */
+        .hero {
+            margin-bottom: 3.2rem;
+            padding-top: 1.6rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #0b1a26;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #3d4b58;
+            max-width: 540px;
+        }
+
+        /* section 通用 */
+        section {
+            margin-bottom: 2.8rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #e6edf2;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #2c3a47;
+        }
+
+        a {
+            color: #0077b6;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #023e8a;
+        }
+
+        /* 亮点卡片 */
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            margin: 1.4rem 0 1.8rem;
+        }
+
+        .highlight-item {
+            background: #ffffff;
+            padding: 1rem 1.2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            flex: 1 1 180px;
+            border: 1px solid #eef3f7;
+        }
+
+        .highlight-item .num {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #0077b6;
+            line-height: 1.1;
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-item .desc {
+            font-size: 0.92rem;
+            color: #3d5468;
+        }
+
+        /* 提示框 */
+        .note-box {
+            background: #f0f5fa;
+            border-left: 4px solid #0077b6;
+            padding: 0.9rem 1.2rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.4rem 0;
+        }
+
+        .note-box p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* FAQ 简洁 */
+        .faq-item {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #e3ecf2;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            font-size: 0.95rem;
+            color: #3f5566;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dce7ef;
+            margin: 2.4rem 0 2rem;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: #6c818f;
+            text-align: center;
+            margin-top: 2.5rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid #e6edf2;
+        }
+
+        /* 响应式 */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .highlight-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- hero 简明说明 -->
+        <header class="hero">
+            <h1>世界杯 · 简明说明</h1>
+            <p>这是一份整理后的指南，帮你快速了解 <a href="https://host-sjb.com">世界杯</a> 相关服务的核心信息、使用方式与常见提醒。没有冗余，只保留最实用的内容。</p>
+        </header>
+
+        <!-- 摘要 -->
+        <section>
+            <h2>摘要</h2>
+            <p>无论你是第一次接触还是想确认细节，这里都提供了清晰的概述。以下内容围绕实际使用场景组织，帮助你建立基本认知，并在需要时找到恰当的操作方向。建议先通读本页，再根据自身情况做下一步判断。</p>
+        </section>
+
+        <!-- 亮点：数据化呈现 -->
+        <section>
+            <h2>亮点</h2>
+            <div class="highlights">
+                <div class="highlight-item">
+                    <span class="num">·</span>
+                    <span class="desc">信息结构清晰，减少反复查找的时间</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="num">·</span>
+                    <span class="desc">兼顾常见场景与边界提醒，避免遗漏</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="num">·</span>
+                    <span class="desc">以务实视角整理，不夸大也不回避</span>
+                </div>
+            </div>
+            <p>这些亮点来自对实际使用过程的梳理，并非空洞的承诺。每一项都可以在后续使用中验证。</p>
+        </section>
+
+        <!-- 使用建议（场景 + 操作提醒） -->
+        <section>
+            <h2>使用建议</h2>
+            <p>在开始之前，建议先明确自己的具体需求：是查找信息、进行配置，还是了解规则？不同目标对应的最优路径可能不同。以下是几个常见场景和建议：</p>
+            <ul style="margin: 0 0 1.2rem 1.5rem; color: #2c3a47;">
+                <li>如果你需要了解基本规则与术语，建议先翻阅概述部分，不要直接跳入细节。</li>
+                <li>如果遇到操作上的疑问，优先查看页面内的提示和常见问题，很多问题已有说明。</li>
+                <li>对于不确定的环节，可以先做小范围尝试，再逐步扩展。</li>
+            </ul>
+            <div class="note-box">
+                <p><strong>小提醒：</strong> 不同环境、设备或网络状况可能影响体验，建议在稳定环境下操作。如果出现异常，先检查基础设置。</p>
+            </div>
+        </section>
+
+        <!-- 可信但克制的访问说明 -->
+        <section>
+            <h2>访问说明</h2>
+            <p>访问 <a href="https://host-sjb.com">世界杯</a> 时，请使用主流浏览器，并保持系统与浏览器为较新版本。页面设计上以信息呈现为主，不使用自动跳转或强制弹窗。所有交互均需用户主动触发。</p>
+            <p>同时请注意：互联网上的信息和服务可能随时间变化，建议以实际页面内容为准。本说明页仅做摘要性整理，不替代官方公告或条款。</p>
+        </section>
+
+        <!-- FAQ 摘要 -->
+        <section>
+            <h2>常见疑问摘要</h2>
+            <div class="faq-item">
+                <div class="faq-q">是否需要注册账户？</div>
+                <div class="faq-a">部分功能可能需要创建账户，但基本信息浏览通常无需登录。请以实际页面指引为准。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">是否有区域限制？</div>
+                <div class="faq-a">具体限制因服务类型而异。建议直接在相关页面查看可用性说明。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">遇到问题如何反馈？</div>
+                <div class="faq-a">通常可在页面底部或帮助中心找到联系方式。先查阅已有文档往往能更快得到答案。</div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 结尾重申链接 -->
+        <p style="text-align: center; font-size: 0.95rem; color: #3d5468;">
+            如需深入了解，可直接访问 <a href="https://host-sjb.com">世界杯</a> 查看完整内容。
+        </p>
+
+        <div class="footer-note">
+            · 本页为独立整理说明，仅供参考 ·
+        </div>
+
+    </div>
+</body>
+</html>
