@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯 · 专题介绍 · on-sjb.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f9fc;
+            color: #1f2e3a;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 0 3rem 0;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(145deg, #d9ede8 0%, #b5dbd1 100%);
+            border-radius: 32px;
+            padding: 3.5rem 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 24px rgba(37, 99, 85, 0.10);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 280px;
+            height: 280px;
+            background: rgba(255, 255, 255, 0.10);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0a2e29;
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #1b4a42;
+            max-width: 680px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 1.6rem;
+            box-shadow: 0 2px 12px rgba(0, 40, 40, 0.05);
+            border: 1px solid rgba(140, 200, 185, 0.30);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(37, 99, 85, 0.12);
+        }
+
+        .card h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #0f4a3d;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .card h2::before {
+            content: '◈';
+            color: #2f8b77;
+            font-size: 1.1rem;
+            margin-right: 0.2rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2d4240;
+            margin-bottom: 0.6rem;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 背景说明块 */
+        .context-block {
+            background: #e7f3ef;
+            border-radius: 24px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 2.8rem;
+            border-left: 6px solid #2a8b74;
+        }
+
+        .context-block h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #0b3d34;
+            margin-bottom: 0.8rem;
+        }
+
+        .context-block p {
+            font-size: 0.98rem;
+            color: #1f413b;
+            max-width: 800px;
+        }
+
+        /* FAQ 摘要 */
+        .faq-mini {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .faq-item {
+            flex: 1 1 200px;
+            background: white;
+            border-radius: 18px;
+            padding: 1.2rem 1.4rem;
+            border: 1px solid #d2e6df;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-size: 0.95rem;
+            color: #11594a;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-item span {
+            font-size: 0.88rem;
+            color: #3b5e56;
+        }
+
+        /* 页尾链接区 */
+        .footer-prompt {
+            text-align: center;
+            padding: 2rem 1rem 1rem 1rem;
+            border-top: 1px solid #cde0d9;
+            margin-top: 1rem;
+        }
+
+        .footer-prompt p {
+            font-size: 1rem;
+            color: #2f5950;
+        }
+
+        .footer-prompt a {
+            color: #166b58;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .footer-prompt a:hover {
+            border-bottom-color: #166b58;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 2.2rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .card-grid {
+                gap: 1.2rem;
+            }
+
+            .card {
+                padding: 1.4rem 1.2rem;
+            }
+
+            .context-block {
+                padding: 1.6rem 1.4rem;
+            }
+
+            .faq-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .page {
+                padding: 1.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Hero 区域 -->
+        <div class="hero">
+            <h1>世界杯 · 站点与视角</h1>
+            <p>关于 on-sjb.com 的背景、内容立场与可信说明——以世界杯为核心线索，理解这个信息空间的价值。</p>
+        </div>
+
+        <!-- 背景说明 -->
+        <div class="context-block">
+            <h3>关于这个站点</h3>
+            <p>
+                on-sjb.com 以<span style="font-weight:500; color:#0b4d3d;">世界杯</span>为核心关注领域，围绕赛事动态、历史数据与观赛文化展开叙述。
+                站点内容由长期关注体育信息生态的编辑团队维护，力求在信息繁杂的领域中提供可核验、有上下文的事实切片。
+                这里不生产夸张的情绪标题，而是尝试以相对克制的文体，记录世界杯在不同时期的面貌与影响。
+            </p>
+        </div>
+
+        <!-- 三段自然介绍（卡片网格） -->
+        <div class="card-grid">
+            <div class="card">
+                <h2>可信的出发点</h2>
+                <p>
+                    本站不依附任何赛事实体或商业机构，所有引用数据均标注原始来源（赛事官网、统计机构或新闻档案）。
+                    编辑过程遵循基本的查证流程，避免二手信息的无限制转述。对于争议性判罚、规则变更或历史误差，
+                    会以脚注或说明框形式标注不确定性，让读者自行判断。
+                </p>
+                <p>
+                    这种克制的信息处理方式，也是<strong>世界杯</strong>专题报道中较为稀缺的品质——在流量优先的环境里，
+                    我们选择优先呈现可追溯的陈述。
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>内容叙事风格</h2>
+                <p>
+                    每篇文章都以一个具体的切片进入：可能是某届世界杯的开幕式细节、某支球队的战术演变，或是主办城市的场外侧记。
+                    不追求覆盖所有赛事，而是选择那些经过时间沉淀或被主流叙事忽视的切面。
+                </p>
+                <p>
+                    比如关于1978年世界杯的几篇分析，侧重还原当时媒体环境如何影响赛事传播，而非简单罗列比分。
+                    这样的角度更适合愿意深入理解<span style="color:#166b58;">世界杯</span>文化脉络的读者。
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>与读者的关系</h2>
+                <p>
+                    站点不设置评论区，也不追踪用户浏览行为。编辑反馈通道仅用于事实勘误与补充建议。
+                    这种设计是为了降低社交噪音，让阅读本身成为主要体验。
+                </p>
+                <p>
+                    如果你对某篇文章中的赛事数据或背景有疑问，可以通过站点提供的联系方式提交核实请求。
+                    我们会在下一次更新中予以回应——这是对<span style="color:#166b58;">世界杯</span>信息生态的另一种负责。
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 摘要（轻量） -->
+        <div class="faq-mini">
+            <div class="faq-item">
+                <strong>内容更新频率？</strong>
+                <span>不定期，但逢世界杯年或重大赛事周期会增加专题更新。不追求日更，注重每篇质量。</span>
+            </div>
+            <div class="faq-item">
+                <strong>数据来源可靠吗？</strong>
+                <span>所有核心数据来自FIFA官方统计、主流通讯社及学术参考文献，每篇文末附有来源简注。</span>
+            </div>
+            <div class="faq-item">
+                <strong>可以引用本站内容吗？</strong>
+                <span>可以，但建议先核实原始来源。本站内容以整合与分析为主，二次引用时请自行确认数据时效。</span>
+            </div>
+        </div>
+
+        <!-- 页尾访问提示 -->
+        <div class="footer-prompt">
+            <p>
+                如果你对世界杯的历史叙事与可信信息感兴趣，可以访问 
+                <a href="https://on-sjb.com">世界杯</a> 
+                专题页面，那里聚合了本站最核心的赛事分析与背景资料。
+            </p>
+            <p style="margin-top:0.5rem; font-size:0.85rem; color:#5c7a72;">
+                阅读即信任的起点，欢迎以审慎的目光浏览每一页内容。
+            </p>
+        </div>
+    </div>
+</body>
+</html>
